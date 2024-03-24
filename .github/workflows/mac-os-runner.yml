@@ -1,0 +1,11 @@
+name: MacOs Runner Test
+on:
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print Hello World
+        run: echo "Hello World"
