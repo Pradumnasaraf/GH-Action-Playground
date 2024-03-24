@@ -1,4 +1,4 @@
-name: MacOs Runner Test
+name: Ubuntu Runner Test
 on:
   workflow_dispatch:
   
