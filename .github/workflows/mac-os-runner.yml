@@ -1,11 +1,21 @@
 name: MacOs Runner Test
+
 on:
   workflow_dispatch:
-  
+
 jobs:
-  run-command:
+  test:
     runs-on: macos-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Print Hello World
-        run: echo "Hello World"
+    - name: Print OS Information
+      run: |
+        echo "Operating System: $(uname -a)"
+        echo "Current Directory: $(pwd)"
+        echo "List of files: $(ls -l)"
+
+    - name: Execute Script
+      run: |
+        echo "Running script..."
+        # Add your script commands here
+        echo "Script execution completed."
